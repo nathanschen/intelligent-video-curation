@@ -1,0 +1,12 @@
+input:
+  directory: C:\Users\tminh\Downloads\test_video_filter
+
+curation_parameters:
+  model: RetinaFace
+  min_face_size: 100
+
+  emotion: happy
+  dummy: very
+
+output:
+  directory: results

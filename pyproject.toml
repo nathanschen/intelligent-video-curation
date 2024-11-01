@@ -1,0 +1,75 @@
+[tool.poetry]
+name = "intelligent-video-curation"
+version = "0.1.0"
+description = ""
+authors = ["Minh Trinh <tminh.us@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.12.5"
+pyyaml = "^6.0.2"
+dacite = "^1.8.1"
+pre-commit = "^4.0.1"
+numpy = "^2.1.2"
+opencv-python = "^4.10.0.84"
+ruff = "^0.7.1"
+mypy = "^1.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+
+preview = true
+
+line-length = 150
+
+# Basic linting (PEP 8 compliance, etc.)
+lint.select = [
+    "ALL",      # General linting rules (does NOT select everything)
+    "I001",     # Import sorting via isort
+    # "B006",    # Detect mutable default arguments
+    "B008",     # Enforce keyword-only arguments
+    # "D",       # Ensure docstrings for classes, functions, methods
+    "ANN",      # Type hints for function arguments and return values
+    "F401",     # Unused imports
+    "F841",     # Unused variables
+    "E711",     # Use 'is' or 'is not' for None comparisons
+    "E301",     # One blank line before functions and classes
+    "E302",     # Two blank lines between top-level definitions
+    "E303",     # Limit maximum consecutive blank lines (default: 2)
+    "E305",     # Two blank lines after imports and class-level code
+    "W391",     # Ensure no trailing blank line at the end of the file
+    # "C812",     # Enforce trailing commas in multi-line function definitions
+    "C416",     # Unnecessary list comprehension
+    # "B301",     # Avoid unnecessary lambda expressions
+    "F601",     # Avoid duplicate dictionary keys
+    # "B008",     # Enforce keyword-only arguments
+]
+
+fix = true
+
+lint.ignore = [
+    "S603", "S404", # subprocess BS
+    "TCH001", # type checking block import thing
+    "D",        # docstring enforcement
+    "PD015",
+    "ANN401",
+    "N806",
+    "G004",     # logging statement f string
+    "DTZ",      # datetime handling
+    "PTH",
+    "FA",
+    "FIX",
+    "TD",
+    "F4",
+    "PD",
+    "PLC",
+    "CPY",
+    "PLR0914",
+    "TCH002",
+    "TRY"
+]
