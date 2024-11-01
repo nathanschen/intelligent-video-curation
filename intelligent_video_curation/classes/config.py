@@ -45,4 +45,4 @@ class Config:
         self.__dict__.update(updated_instance.__dict__)
 
 
-GlobalConfig: Config
+GlobalConfig: Config = Config()

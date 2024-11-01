@@ -3,8 +3,8 @@ from dataclasses import dataclass
 
 @dataclass
 class Labels:
-    dummy: str
-    verdict: bool
+    dummy: str = ""
+    verdict: bool = True
 
 
 # please add any relevant labels to your filters here. labels may not always be the same as
