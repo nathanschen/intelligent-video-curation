@@ -5,6 +5,19 @@ from intelligent_video_curation.classes.helpers import dict_to_class
 
 
 @dataclass
+class Parameters:
+    dummy: Optional[str] = None
+    model: Optional[str] = None
+    min_face_size: Optional[int] = None
+
+    emotion: Optional[str] = None
+
+
+# Please add any new parameters here. These will be populated from config.yaml.
+# follow the format shown.
+
+
+@dataclass
 class Input:
     directory: Optional[str] = None
 
@@ -12,14 +25,6 @@ class Input:
 @dataclass
 class Output:
     directory: Optional[str] = None
-
-
-@dataclass
-class Parameters:
-    emotion: Optional[str] = None
-    dummy: Optional[str] = None
-    model: Optional[str] = None
-    min_face_size: Optional[int] = None
 
 
 @dataclass

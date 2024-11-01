@@ -1,9 +1,11 @@
 from dataclasses import dataclass
-from typing import Optional
 
 
 @dataclass
 class Labels:
-    dummy: Optional[str] = None
+    dummy: str
+    verdict: bool
 
-    verdict: bool = True
+
+# please add any relevant labels to your filters here. labels may not always be the same as
+# curation parameters. follow the format examples.
