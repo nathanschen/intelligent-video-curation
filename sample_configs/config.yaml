@@ -5,6 +5,7 @@ curation_parameters:
   model: RetinaFace
   min_face_size: 100
 
+  exposure: correct
   emotion: happy
   dummy: very
 

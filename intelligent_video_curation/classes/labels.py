@@ -3,6 +3,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Labels:
+    exposure: str = "correct"
     dummy: str = ""
     verdict: bool = True
 

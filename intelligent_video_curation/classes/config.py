@@ -9,7 +9,7 @@ class Parameters:
     dummy: Optional[str] = None
     model: Optional[str] = None
     min_face_size: Optional[int] = None
-
+    exposure: Optional[str] = None
     emotion: Optional[str] = None
 
 
